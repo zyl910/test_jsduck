@@ -7,11 +7,19 @@ Links:
 * Git:	https://github.com/zyl910/test_jsduck
 * Blog:	http://www.cnblogs.com/zyl910/tag/test_jsduck/
 
-![img_home](images/img_home.png "img_home")
+## Guide (指南)
 
-![img_cat](images/img_cat.png "img_cat")
+Run `jsduck_make.bat`
 
-Sample:
+![img_bat](images_md/img_bat.png "img_bat")
+
+Doccument:
+
+![img_home](images_md/img_home.png "img_home")
+
+![img_cat](images_md/img_cat.png "img_cat")
+
+Sample code:
 
 ```JavaScript
 /** 动物.
@@ -63,6 +71,6 @@ var Cat = {
 
 ## Change history (变更日志)
 
-[2015-10-26] v1.0: http://www.cnblogs.com/zyl910/p/zdbviewcs.html
+[2015-10-26] v1.0: http://www.cnblogs.com/zyl910/p/test_jsduck_on_windows.html
 
 * Release v1.0 (发布1.0版).
