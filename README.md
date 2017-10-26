@@ -13,7 +13,7 @@ Links:
 
 Sample:
 
-```
+```JavaScript
 /** 动物.
  */
 var Animal = {
