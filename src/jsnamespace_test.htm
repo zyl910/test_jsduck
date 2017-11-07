@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>测试JavaScript 命名空间</title>
+</head>
+<body>
+<script type="text/javascript" src="jsnamespace.js"></script>
+
+<script type="text/javascript">
+
+/** 测试. */
+function doTest() {
+	alert("Hello");
+	alert(jsnamespace);
+}
+
+
+</script>
+<h1>测试JavaScript 命名空间</h1>
+
+<input type="button" value="测试" OnClick="doTest();" title="doTest" />
+<br/>
+输出:<br/>
+<textarea id="txtresult" rows="12" style="width:95%"></textarea>
+
+</body>
+</html>
