@@ -11,8 +11,13 @@
 
 /** 测试. */
 function doTest() {
-	alert("Hello");
-	alert(jsnamespace);
+	//alert(jsnamespace);
+	var p1 = new jsnamespace.PersonInfo();
+	p1.name = "Zhang San";
+	p1.gender = jsnamespace.GenderCode.MALE;
+	var p2 = new jsnamespace.PersonInfo({"name": "Li Si", "gender": jsnamespace.GenderCode.FEMALE});
+	jsnamespace.PersonInfoUtil.show(p1);
+	jsnamespace.PersonInfoUtil.show(p2);
 }
 
 
