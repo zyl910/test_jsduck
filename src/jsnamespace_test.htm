@@ -13,9 +13,9 @@
 function doTest() {
 	//alert(jsnamespace);
 	var p1 = new jsnamespace.PersonInfo();
-	p1.name = "Zhang San";
+	p1.name = "Zhang San";	// 张三.
 	p1.gender = jsnamespace.GenderCode.MALE;
-	var p2 = new jsnamespace.PersonInfo({"name": "Li Si", "gender": jsnamespace.GenderCode.FEMALE});
+	var p2 = new jsnamespace.PersonInfo({"name": "Li Si", "gender": jsnamespace.GenderCode.FEMALE});	// 李四.
 	jsnamespace.PersonInfoUtil.show(p1);
 	jsnamespace.PersonInfoUtil.show(p2);
 	//
