@@ -44,7 +44,7 @@ jsnamespace.PersonInfo = function(cfg) {
 /**
  * 取得称谓.
  *
- * @return  {String}	返回欢迎字符串.
+ * @return  {String}	返回称谓字符串.
  */
 jsnamespace.PersonInfo.prototype.getAppellation = function() {
 	var rt = "";
