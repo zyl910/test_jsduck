@@ -33,19 +33,11 @@ jsnamespace.GenderCode = {
  */
 jsnamespace.PersonInfo = function(cfg) {
 	cfg = cfg || {};
-	/** @cfg {String} [name=""]
-	 * 姓名.
-	 */
-	/** @property {String}
-	 * 姓名.
-	 */
+	/** @cfg {String} [name=""] 姓名. */
+	/** @property {String} 姓名. */
 	this.name = cfg["name"] || "";
-	/** @cfg {jsnamespace.GenderCode} [gender=jsnamespace.GenderCode.UNKNOWN]
-	 * 性别.
-	 */
-	/** @property {jsnamespace.GenderCode}
-	 * 性别.
-	 */
+	/** @cfg {jsnamespace.GenderCode} [gender=jsnamespace.GenderCode.UNKNOWN] 性别. */
+	/** @property {jsnamespace.GenderCode} 性别. */
 	this.gender = cfg["gender"] || jsnamespace.GenderCode.UNKNOWN;
 };
 
