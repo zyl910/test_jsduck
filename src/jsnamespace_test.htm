@@ -17,7 +17,9 @@ function doTest() {
 	p1.name = "Zhang San";	// 张三.
 	p1.gender = jsnamespace.GenderCode.MALE;
 	var p2 = new jsnamespace.Employee({"name": "Li Si", "gender": jsnamespace.GenderCode.FEMALE, "email": "lisi@mail.com"});	// 李四.
-	jsnamespace.PersonInfo.show(p1);
+	alert(p1.getHello());
+	alert(p2.getHello());
+	jsnamespace.PersonInfo.setHelloWord("Wellcome");
 	jsnamespace.PersonInfoUtil.show(p1);
 	jsnamespace.PersonInfoUtil.show(p2);
 	//

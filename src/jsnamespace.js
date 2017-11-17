@@ -53,6 +53,11 @@ jsnamespace.PersonInfo = function(cfg) {
 	this.gender = cfg["gender"] || jsnamespace.GenderCode.UNKNOWN;
 };
 (function(){
+	/**
+	 * 欢迎单词.
+	 * @static @private
+	 */
+	var m_helloWord = "Hello";
 
 	/**
 	 * 取得称谓.
@@ -75,19 +80,26 @@ jsnamespace.PersonInfo = function(cfg) {
 	 * @return  {String}	返回欢迎字符串.
 	 */
 	jsnamespace.PersonInfo.prototype.getHello = function() {
-		var rt = "Hello, " + this.getAppellation() + " " + this.name;
+		var rt = m_helloWord + " " + this.getAppellation() + " " + this.name;
 		return rt;
 	};
 
 	// -- static method --
-	/** 显示信息.
+	/** 取得欢迎单词.
 	 *
-	 * @param {jsnamespace.PersonInfo}	p	个人信息.
+	 * @return  {String}	返回欢迎单词.
 	 * @static
 	 */
-	jsnamespace.PersonInfo.show = function(p) {
-		var s = p.getHello();
-		alert(s);
+	jsnamespace.PersonInfo.getHelloWord = function() {
+		return m_helloWord;
+	};
+	/** 设置欢迎单词.
+	 *
+	 * @param {String}	v	欢迎单词.
+	 * @static
+	 */
+	jsnamespace.PersonInfo.setHelloWord = function(v) {
+		m_helloWord = v;
 	};
 	
 })();
