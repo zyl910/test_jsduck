@@ -71,6 +71,10 @@ var Cat = {
 
 ## Change history (变更日志)
 
+[2015-11-09] v1.1: http://www.cnblogs.com/zyl910/p/js_namespace_bestpractice.html
+
+* Define namespace (定义命名空间) .
+
 [2015-10-26] v1.0: http://www.cnblogs.com/zyl910/p/test_jsduck_on_windows.html
 
 * Release v1.0 (发布1.0版).
