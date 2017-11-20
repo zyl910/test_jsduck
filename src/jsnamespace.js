@@ -58,6 +58,23 @@ jsnamespace.PersonInfo = function(cfg) {
 	 * @static @private
 	 */
 	var m_helloWord = "Hello";
+	
+	/**
+	 * 取得称谓文本.
+	 *
+	 * @param {jsnamespace.GenderCode}	gender	性别.
+	 * @return  {String}	返回称谓字符串.
+	 * @static @private
+	 */
+	var m_getAppellationText = function(gender) {
+		var rt = "";
+		if (jsnamespace.GenderCode.MALE == gender) {
+			rt = "Mr.";
+		} else if (jsnamespace.GenderCode.FEMALE == gender) {
+			rt = "Ms.";
+		}
+		return rt;
+	};
 
 	/**
 	 * 取得称谓.
@@ -65,12 +82,7 @@ jsnamespace.PersonInfo = function(cfg) {
 	 * @return  {String}	返回称谓字符串.
 	 */
 	jsnamespace.PersonInfo.prototype.getAppellation = function() {
-		var rt = "";
-		if (jsnamespace.GenderCode.MALE == this.gender) {
-			rt = "Mr.";
-		} else if (jsnamespace.GenderCode.FEMALE == this.gender) {
-			rt = "Ms.";
-		}
+		var rt = m_getAppellationText(this.gender);
 		return rt;
 	};
 
@@ -108,6 +120,8 @@ jsnamespace.PersonInfo = function(cfg) {
 
 /** @class
  * 雇员信息. 构造函数法的类.
+ *
+ * @extends jsnamespace.PersonInfo
  */
 jsnamespace.Employee = function(cfg) {
 	cfg = cfg || {};
