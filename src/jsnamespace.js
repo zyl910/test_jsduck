@@ -57,7 +57,7 @@ jsnamespace.PersonInfo = function(cfg) {
 	 * 欢迎单词.
 	 * @static @private
 	 */
-	var m_helloWord = "Hello";
+	var m_WordHello = "Hello";
 	
 	/**
 	 * 取得称谓文本.
@@ -92,7 +92,7 @@ jsnamespace.PersonInfo = function(cfg) {
 	 * @return  {String}	返回欢迎字符串.
 	 */
 	jsnamespace.PersonInfo.prototype.getHello = function() {
-		var rt = m_helloWord + " " + this.getAppellation() + " " + this.name;
+		var rt = m_WordHello + " " + this.getAppellation() + " " + this.name;
 		return rt;
 	};
 
@@ -102,16 +102,16 @@ jsnamespace.PersonInfo = function(cfg) {
 	 * @return  {String}	返回欢迎单词.
 	 * @static
 	 */
-	jsnamespace.PersonInfo.getHelloWord = function() {
-		return m_helloWord;
+	jsnamespace.PersonInfo.getWordHello = function() {
+		return m_WordHello;
 	};
 	/** 设置欢迎单词.
 	 *
 	 * @param {String}	v	欢迎单词.
 	 * @static
 	 */
-	jsnamespace.PersonInfo.setHelloWord = function(v) {
-		m_helloWord = v;
+	jsnamespace.PersonInfo.setWordHello = function(v) {
+		m_WordHello = v;
 	};
 	
 })();
