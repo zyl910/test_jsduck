@@ -142,6 +142,32 @@ jsnamespace.extend(jsnamespace.Employee, jsnamespace.PersonInfo);
 	
 })();
 
+// == Staff class ==
+
+/** @class
+ * 职员信息. 构造函数法的类.
+ *
+ * @extends jsnamespace.Employee
+ */
+jsnamespace.Staff = function(cfg) {
+	cfg = cfg || {};
+	jsnamespace.Employee.call(this, cfg);
+	// 自身的实例字段.
+	/** @property {String} 职务称号. */
+	this.duty = cfg["duty"] || "";
+};
+jsnamespace.extend(jsnamespace.Staff, jsnamespace.Employee);
+(function(){
+
+	/** @inheritdoc */
+	jsnamespace.Staff.prototype.getHello = function() {
+		var rt = jsnamespace.Employee.prototype.getHello.call(this);
+		rt = rt + " [" + this.duty + "]";
+		return rt;
+	};
+	
+})();
+
 
 // == PersonInfoUtil class ==
 

@@ -17,11 +17,14 @@ function doTest() {
 	p1.name = "Zhang San";	// 张三.
 	p1.gender = jsnamespace.GenderCode.MALE;
 	var p2 = new jsnamespace.Employee({"name": "Li Si", "gender": jsnamespace.GenderCode.FEMALE, "email": "lisi@mail.com"});	// 李四.
+	var p3 = new jsnamespace.Staff({"name": "Wang Wu", "gender": jsnamespace.GenderCode.MALE, "email": "lisi@mail.com", "duty": "主任"});	// 王五.
 	alert(p1.getHello());
 	alert(p2.getHello());
-	jsnamespace.PersonInfo.setWordHello("Wellcome");
+	alert(p3.getHello());
+	jsnamespace.PersonInfo.setWordHello("Welcome");
 	jsnamespace.PersonInfoUtil.show(p1);
 	jsnamespace.PersonInfoUtil.show(p2);
+	jsnamespace.PersonInfoUtil.show(p3);
 	//
 	var c = jsnamespace.sub.Cat.createNew();
 	c.makeSound();
