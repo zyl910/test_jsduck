@@ -10,22 +10,54 @@
 
 <script type="text/javascript">
 
+/** 追加日志.
+ *
+ * @param {String}	str	日志字符串.
+ */
+function addlog(str) {
+	var txtresult = document.getElementById("txtresult");
+	txtresult.value = txtresult.value + str + "\r\n";
+}
+
 /** 测试. */
 function doTest() {
+	var txtresult = document.getElementById("txtresult");
+	txtresult.value = "";
+	// do
 	//alert(jsnamespace);
 	var p1 = new jsnamespace.PersonInfo();
 	p1.name = "Zhang San";	// 张三.
 	p1.gender = jsnamespace.GenderCode.MALE;
 	var p2 = new jsnamespace.Employee({"name": "Li Si", "gender": jsnamespace.GenderCode.FEMALE, "email": "lisi@mail.com"});	// 李四.
 	var p3 = new jsnamespace.Staff({"name": "Wang Wu", "gender": jsnamespace.GenderCode.MALE, "email": "lisi@mail.com", "duty": "主任"});	// 王五.
-	alert(p1.getHello());
-	alert(p2.getHello());
-	alert(p3.getHello());
+	addlog(p1.getHello());
+	addlog(p2.getHello());
+	addlog(p3.getHello());
+	// setWordHello.
+	addlog("// setWordHello");
 	jsnamespace.PersonInfo.setWordHello("Welcome");
-	jsnamespace.PersonInfoUtil.show(p1);
-	jsnamespace.PersonInfoUtil.show(p2);
-	jsnamespace.PersonInfoUtil.show(p3);
-	//
+	addlog(p1.getHello());
+	addlog(p2.getHello());
+	addlog(p3.getHello());
+	// instanceof.
+	addlog("// instanceof");
+	addlog("p1 instanceof jsnamespace.PersonInfo: " + (p1 instanceof jsnamespace.PersonInfo) );
+	addlog("p1 instanceof jsnamespace.Employee: " + (p1 instanceof jsnamespace.Employee) );
+	addlog("p1 instanceof jsnamespace.Staff: " + (p1 instanceof jsnamespace.Staff) );
+	addlog("p2 instanceof jsnamespace.PersonInfo: " + (p2 instanceof jsnamespace.PersonInfo) );
+	addlog("p2 instanceof jsnamespace.Employee: " + (p2 instanceof jsnamespace.Employee) );
+	addlog("p2 instanceof jsnamespace.Staff: " + (p2 instanceof jsnamespace.Staff) );
+	addlog("p3 instanceof jsnamespace.PersonInfo: " + (p3 instanceof jsnamespace.PersonInfo) );
+	addlog("p3 instanceof jsnamespace.Employee: " + (p3 instanceof jsnamespace.Employee) );
+	addlog("p3 instanceof jsnamespace.Staff: " + (p3 instanceof jsnamespace.Staff) );
+	// PersonInfoUtil.
+	//jsnamespace.PersonInfoUtil.show(p1);
+	//jsnamespace.PersonInfoUtil.show(p2);
+	//jsnamespace.PersonInfoUtil.show(p3);
+}
+
+/** 测试Cat. */
+function doTestCat() {
 	var c = jsnamespace.sub.Cat.createNew();
 	c.makeSound();
 }
@@ -35,9 +67,10 @@ function doTest() {
 <h1>测试JavaScript 命名空间</h1>
 
 <input type="button" value="测试" OnClick="doTest();" title="doTest" />
+&nbsp; <input type="button" value="测试Cat" OnClick="doTestCat();" title="doTestCat" />
 <br/>
 输出:<br/>
-<textarea id="txtresult" rows="12" style="width:95%"></textarea>
+<textarea id="txtresult" rows="12" style="width:95%" readonly ></textarea>
 
 </body>
 </html>
