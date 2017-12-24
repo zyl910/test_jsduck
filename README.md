@@ -71,7 +71,7 @@ var Cat = {
 
 ## Change history (变更日志)
 
-[2017-12-21] v1.2:
+[2017-12-21] v1.2: http://www.cnblogs.com/zyl910/p/js_class_bestpractice.html
 
 * Encapsulation Inheritance and Polymorphism (封装、继承与多态) .
 
